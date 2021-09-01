@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation page</title>
+    <link rel="stylesheet" href="stayle.css">
+</head>
+<body>
+    
+    <main id="main-doc">
+        
+        <div>
+            <nav id="navbar">
+                <header><h1>Python Documentation</h1></header>
+                <ul>
+                    <li class="nav-link"><a href="#introdaction">Introdaction</a></li>
+                    <li class="nav-link"><a href="#requierment">Requierment</a></li>
+                    <li class="nav-link"><a href="#hello_world">Hello world</a></li>
+                    <li class="nav-link"><a href="#variables">Variables</a></li>
+                    <li class="nav-link"><a href="#declaring_variables">Declaring Variables</a></li>
+                    <li class="nav-link"><a href="#variable_scope">Variable scope</a></li>
+                    <li class="nav-link"><a href="#global_variables">Global Variables</a></li>
+                    <li class="nav-link"><a href="#constant">Constant</a></li>
+                    <li class="nav-link"><a href="#data_types">Data types</a></li>
+                    <li class="nav-link"><a href="#conditional_statement">Conditional statement</a></li>
+                    <li class="nav-link"><a href="#loop_statement">Loop statement</a></li>
+                    <li class="nav-link"><a href="#function_declarations">Function declarations</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+        <div>
+            <section class="main-section" id="introdaction">
+                <header><h1>Introdaction</h1></header>
+                <p>
+                    Python is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects
+                </p>
+                <p>
+                    Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.
+                </p>
+                <p>
+                    Guido van Rossum began working on Python in the late 1980s, as a successor to the ABC programming language, and first released it in 1991 as Python 0.9.0.Python 2.0 was released in 2000 and introduced new features, such as list comprehensions and a garbage collection system using reference counting. Python 3.0 was released in 2008 and was a major revision of the language that is not completely backward-compatible. Python 2 was discontinued with version 2.7.18 in 2020.
+                </p>
+                <p>Python consistently ranks as one of the most popular programming languages.</p>
+            </section>
+            <section class="main-section" id="requierment">
+                <header><h1>Requierment</h1></header>
+                <p>
+                    There are no such prerequisites to learn Python but having a basic knowledge of any programming language concepts like what is a loop, what if and else does, how operators are used, etc. will be helpful. If you have strong command over the basics of any programming language, you can learn Python quickly.
+                </p>
+            </section>
+            <section class="main-section" id="hello_world">
+                <header><h1>Hello world</h1></header>
+                <p>To get started with Python first let's write our first('Hello world') code</p>
+                <code>
+                    print('Hello world')
+                </code>
+                <p>The output of this code will be Hello world</p>
+            </section>
+            <section class="main-section" id="variables">
+                <header><h1>Variables</h1></header>
+                <p>A Python variable is a reserved memory location to store values. In other words, a variable in a python program gives data to the computer for processing.</p>
+                <p>
+                    A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).
+                </p>
+                <p>Rules for Python variables:</p>
+                <ul>
+                    <li>A variable name must start with a letter or the underscore character</li>
+                    <li>A variable name cannot start with a number</li>
+                    <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+                    <li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
+                </ul>
+                <p>Example</p>
+                <code>
+                    #Legal variable names: <br>
+                    myvar = "John"<br>
+                    my_var = "John"<br>
+                    _my_var = "John"<br>
+                    myVar = "John"<br>
+                    MYVAR = "John"<br>
+                    myvar2 = "John"<br>
+                    <br>
+                    #Illegal variable names: <br>
+                    2myvar = "John"<br>
+                    my-var = "John",<br>
+                    my var = "John"
+                </code>
+            </section>
+            <section class="main-section" id="declaring_variables">
+                <header><h1>Declaring variables</h1></header>
+                <p>Creating Variables. Python has no command for declaring a variable. A variable is created the moment you first assign a value to it.</p>
+                <p>Example</p>
+                <code>
+                    myvar = "John"<br>
+                    my_var = "John"<br>
+                    _my_var = "John"<br>
+                    myVar = "John"<br>
+                    MYVAR = "John"<br>
+                    myvar2 = "John"<br>
+            </section>
+            <section class="main-section" id="variable_scope">
+                <header><h1>Variable scope</h1></header>
+                <p>The scope of a variable in python is that part of the code where it is visible. Actually, to refer to it, you don't need to use any prefixes then. Let's take an example, but before let's revise python Syntax. Also, the duration for which a variable is alive is called its 'lifetime'.</p>
+                <code>
+                    >>> b=8<br>
+                    >>> def func(): <br>
+                    a=7 <br>
+                    print(a) <br>
+                    print(b) <br>             
+                    >>> func() 
+                </code>
+                <h3>output</h3>
+                <code>
+                    7 <br>
+                    8
+                </code>
+                <p>but</p>
+                <code>
+                    >>> print(a)
+                </code>
+                <h3>output</h3>
+                <code>
+                    Traceback (most recent call last): <br>
+                    File “pyshell#6”, line 1, in module <br>
+                    a <br>
+                    NameError: name ‘a’ is not defined
+                </code>
+                <h1>Types of Python Variable Scope</h1>
+                <p>
+                    There are 2 types of Variable Scope in Python, let’s discuss them one by one:
+                </p>
+                <h2>Local variables</h2>
+                <p>In the above code, we define a variable ‘a’ in a function ‘func’. So, ‘a’ is local to ‘func’. Hence, we can read/write it in func, but not outside it.</p>
+                <p>
+                    When we try to do so, it raises a NameError. Look at this code.
+                </p>
+                <code>
+                    >>> a=0 <br>
+                    >>> def func(): <br>
+                               print(a) <br>
+                                a=1 <br>
+                               print(a) <br>            
+                    >>> func()
+                </code>
+                <h2>OUTPUT</h2>
+                <code>
+                    Traceback (most recent call last): <br>
+                    File “<pyshell#79>”, line 1, in <module> <br>
+                    func() <br>
+                    File “<pyshell#78>”, line 2, in func <br>
+                    print(a) <br>
+                    UnboundLocalError: local variable ‘a’ referenced before assignment
+                </code>
+                <p>
+                    Here, we could’ve accessed the global Scope ‘a’ inside ‘func’, but since we also define a local ‘a’ in it, it no longer accesses the global ‘a’.
+                </p>
+                <p>
+                    Then, the first print statement inside ‘func’ throws an error in Python, because we’re trying to access the local scope ‘a’ before assigning it.
+                </p>
+                <p>
+                    However, it is bad practice to try to manipulate global values from inside local scopes. Try to pass it as a parameter to the function.
+                </p>
+                <code>
+                    >>> def func(a=0): <br>
+                                a+=1 <br>
+                                print(a) <br>            
+                    >>> func()
+                </code>
+                <h2>OUTPUT</h2>
+                <code>1</code>
+            </section>
+            <section class="main-section" id="global_variables">
+                <header><h1>Global Variables</h1></header>
+                <p>We also declare a variable ‘b’ outside any other python Variable scope, this makes it global scope.</p>
+                <p>
+                    Consequently, we can read it anywhere in the program. Later in this article, we will see how to write it inside func.
+                </p>                
+            </section>
+            <section class="main-section" id="constant">
+                <header><h1>Constant</h1></header>
+                <p>
+                    A constant is a type of variable whose value cannot be changed. It is helpful to think of constants as containers that hold information which cannot be changed later.
+                </p>
+                <p>
+                    You can think of constants as a bag to store some books which cannot be replaced once placed inside the bag.
+                </p>
+                <h1>Assigning value to constant in Python</h1>
+                <p>
+                    In Python, constants are usually declared and assigned in a module. Here, the module is a new file containing variables, functions, etc which is imported to the main file.
+                </p>
+                <p>
+                    Inside the module, constants are written in all capital letters and underscores separating the words.
+                </p>
+                <h2>Example 3: Declaring and assigning value to a constant</h2>
+                <p>Create a constant.py:</p>
+                <code>
+                    PI = 3.14 <br>
+                    GRAVITY = 9.8
+                </code>
+                <p>Create a main.py:</p>
+                <code>
+                    import constant <br>
+                    <br>
+                    print(constant.PI) <br>
+                    print(constant.GRAVITY)
+                </code>
+                <h2>Output</h2>
+                <code>
+                    3.14 <br>
+                    9.8
+                </code>
+                <p>
+                    In the above program, we create a constant.py module file. Then, we assign the constant value to PI and GRAVITY. After that, we create a main.py file and import the constant module. Finally, we print the constant value.
+                </p>
+            </section>
+            <section class="main-section" id="data_types">
+                <header><h1>Data types</h1></header>
+                <p>
+                    In programming, data type is an important concept.
+                </p>
+                <p>
+                    Variables can store data of different types, and different types can do different things.
+                </p>
+                <p>
+                    Python has the following data types built-in by default, in these categories:
+                </p>
+                <p>Text Type: str</p>
+                <p>Numeric Types: int, complex, floot</p>
+                <p>Sequence Types: list, tuple, range</p>
+                <p>Mapping Type: dict</p>
+                <p>Set Types: set, frozenset</p>
+                <p>Boolean Type: bool</p>
+                <p>Binary Types: bytes, bytearray, memoryview</p>
+                <h1>Getting the Data Type</h1>
+                <p>
+                    You can get the data type of any object by using the type() function:
+                </p>
+                <h2>Example</h2>
+                <p>
+                    Print the data type of the variable x:
+                </p>
+                <code>
+                    x = 5 <br>
+                    print(type(x))
+                </code>
+                <h1>Setting the Data Type</h1>
+                <p>Since python is a dynamic language the data type is set when you assign a value to a variable</p>
+                <h1>Setting the Specific Data Type</h1>
+                <p>
+                    If you want to specify the data type, you can use the following constructor functions:
+                </p>
+                <code>
+                    data_types(value)
+                </code>
+            </section>
+            <section class="main-section" id="conditional_statement">
+                <header><h1>Conditional statement</h1></header>
+                <h1>Python Conditions and If statements</h1>
+                <p>
+                    Python supports the usual logical conditions from mathematics:
+                </p>
+                <ul>
+                    <li>Equals: a == b</li>
+                    <li>Not Equals: a != b</li>
+                    <li>Less than: a < b</li>
+                    <li>Less than or equals: a <= b</li>
+                    <li>Greater than: a > b</li>
+                    <li>Greater than or equals: a >= b</li>
+                </ul>
+                <p>
+                    These conditions can be used in several ways, most commonly in "if statements" and loops.
+
+                    An "if statement" is written by using the if keyword.
+                </p>
+                <h2>Example</h2>
+                <p>
+                    If statement:
+                </p>
+                <code>
+                    a = 10
+                    b = 15
+                    if b > b:
+                        print('b is Greater than a')
+                </code>
+                <p>
+                    In this example we use two variables, a and b, which are used as part of the if statement to test whether b is greater than a. As a is 10, and so we print to screen that "b is greater than a".
+                </p>
+                <h1>Indentation</h1>
+                <p>
+                    Python relies on indentation (whitespace at the beginning of a line) to define scope in the code. Other programming languages often use curly-brackets for this purpose.
+                </p>
+                <h2>Example</h2>
+                <p>
+                    If statement, without indentation (will raise an error):
+                </p>
+                <code>
+                    a = 33 <br>
+                    b = 200 <br>
+                    if b > a: <br>
+                    print("b is greater than a") # you will get an error
+                </code>
+                <h1>Elif</h1>
+                <p>
+                    The else keyword catches anything which isn't caught by the preceding conditions.
+                </p>
+                <h2>Example</h2>
+                <code>
+                    a = 200 <br>
+                    b = 33 <br>
+                    if b > a: <br>
+                      print("b is greater than a") <br>
+                    elif a == b: <br>
+                      print("a and b are equal") <br>
+                    else: <br>
+                      print("a is greater than b")
+                </code>
+                <p>
+                    In this example a is greater than b, so the first condition is not true, also the elif condition is not true, so we go to the else condition and print to screen that "a is greater than b".
+                </p>
+                <p>
+                    You can also have an else without the elif:
+                </p>
+                <h2>Example</h2>
+                <code>
+                    a = 200 <br>
+                    b = 33 <br>
+                    if b > a: <br>
+                      print("b is greater than a") <br>
+                    else: <br>
+                      print("b is not greater than a")
+                </code>
+                <h1>Short Hand If</h1>
+                <p>
+                    If you have only one statement to execute, you can put it on the same line as the if statement.
+                </p>
+                <h2>Example</h2>
+                <p>
+                    One line if statement:
+                </p>
+                <code>
+                    if a > b: print("a is greater than b")
+                </code>
+                <h1>Short Hand If ... Else</h1>
+                <p>
+                    If you have only one statement to execute, one for if, and one for else, you can put it all on the same line:
+                </p>
+                <code>
+                    print("A") if a > b else print("B")
+                </code>
+                <p>
+                    You can also have multiple else statements on the same line:
+                </p>
+                <code>
+                    print("A") if a > b else print("=") if a == b else print("B")
+                </code>
+            </section>
+            <section class="main-section" id="loop_statement">
+                <header><h1>Loop statement</h1></header>
+                <p>
+                    Python has two primitive loop commands:
+                </p>
+                <ul>
+                    <li>
+                        while loops
+                    </li>
+                    <li>
+                        for loops
+                    </li>
+                </ul>
+                <h1>The while Loop</h1>
+                <p>
+                    With the while loop we can execute a set of statements as long as a condition is true.
+                </p>
+                <h2>Example</h2>
+                <p>
+                    Exit the loop when i is 3:
+                </p>
+                <code>
+                    i = 1 <br>
+                    while i < 6: <br>
+                      print(i) <br> 
+                      if i == 3: <br>
+                        break <br>
+                      i += 1
+                </code>
+                <h1>The continue Statement</h1>
+                <p>
+                    With the continue statement we can stop the current iteration, and continue with the next:
+                </p>
+                <h2>Example</h2>
+                <p>
+                    Continue to the next iteration if i is 3:
+                </p>
+                <code>
+                    i = 0 <br>
+                    while i < 6: <br>
+                      i += 1 <br>
+                      if i == 3: <br>
+                        continue <br>
+                      print(i)
+
+                </code>
+                <h1>Python For Loops</h1>
+                <p>
+                    A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+                </p>
+                <p>
+                    This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.
+                </p>
+                <p>
+                    With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+                </p>
+                <h2>Example</h2>
+                <p>
+                    Print each fruit in a fruit list:
+                </p>
+                <code>
+                    fruits = ["apple", "banana", "cherry"] <br>
+                    for x in fruits: <br>
+                      print(x)
+                </code>
+                <p>
+                    The for loop does not require an indexing variable to set beforehand.
+                </p>
+                <h1>Looping Through a String</h1>
+                <p>
+                    Even strings are iterable objects, they contain a sequence of characters:
+                </p>
+                <h2>Example</h2>
+                <p>
+                    Loop through the letters in the word "banana":
+                </p>
+                <code>
+                    for x in "banana": <br>
+                      print(x)
+                </code>
+                <h1>The range() Function</h1>
+                <p>
+                    To loop through a set of code a specified number of times, we can use the range() function,
+                </p>
+                <p>
+                    The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.
+                </p>
+                <h2>Example</h2>
+                <p>
+                    Using the range() function:
+                </p>
+                <code>
+                    for x in range(6): <br>
+                      print(x)
+                </code>
+                <p>
+                    Note that range(6) is not the values of 0 to 6, but the values 0 to 5.
+                </p>
+                <p>
+                    The range() function defaults to 0 as a starting value, however it is possible to specify the starting value by adding a parameter: range(2, 6), which means values from 2 to 6 (but not including 6):
+                </p>
+                <h2>Example</h2>
+                <p>
+                    Using the start parameter:
+                </p>
+                <code>
+                    for x in range(2, 6): <br>
+                      print(x)
+                </code>
+                <p>
+                    The range() function defaults to increment the sequence by 1, however it is possible to specify the increment value by adding a third parameter: range(2, 30, 3):
+                </p>
+                <h2>Example</h2>
+                <p>
+                    Increment the sequence with 3 (default is 1):
+                </p>
+                <code>
+                    for x in range(2, 30, 3): <br>
+                      print(x)
+                </code>
+            </section>
+            <section class="main-section" id="function_declarations">
+                <header><h1>Function declarations</h1></header>
+                <h1>Python Functions</h1>
+                <p>
+                    A function is a block of code which only runs when it is called.
+                </p>
+                <p>
+                    You can pass data, known as parameters, into a function.
+                </p>
+                <p>
+                    A function can return data as a result.
+                </p>
+                <h1>Creating a Function</h1>
+                <p>
+                    In Python a function is defined using the def keyword:
+                </p>
+                <h2>Example</h2>
+                <code>
+                    def my_function(): <br>
+                      print("Hello from a function")
+                </code>
+                <h1>Calling a Function</h1>
+                <p>
+                    To call a function, use the function name followed by parenthesis:
+                </p>
+                <h2>Example</h2>
+                <code>
+                def my_function(): <br>
+                    print("Hello from a function") <br>
+                  <br>
+                my_function()
+              
+                </code>
+                <h1>Arguments</h1>
+                <p>
+                    Information can be passed into functions as arguments.
+                </p>
+                <p>
+                    Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.
+                </p>
+                <p>
+                    The following example has a function with one argument (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:
+                </p>
+                <h2>Example</h2>
+                <code>
+                    def my_function(fname): <br>
+                      print(fname + " Refsnes") <br>
+                    <br>
+                    my_function("Emil") <br>
+                    my_function("Tobias") <br>
+                    my_function("Linus")
+                </code>
+                <p>
+                    Arguments are often shortened to args in Python documentations.
+                </p>
+                <h1>Parameters or Arguments?</h1>
+                <p>
+                    The terms parameter and argument can be used for the same thing: information that are passed into a function.
+                </p>
+                <p>
+                    From a function's perspective:
+                </p>
+                <p>
+                    A parameter is the variable listed inside the parentheses in the function definition.
+                </p>
+                <p>
+                    An argument is the value that is sent to the function when it is called.
+                </p>
+                <h1>Number of Arguments</h1>
+                <p>
+                    By default, a function must be called with the correct number of arguments. Meaning that if your function expects 2 arguments, you have to call the function with 2 arguments, not more, and not less.
+                </p>
+                <h2>Example</h2>
+                <p>
+                    This function expects 2 arguments, and gets 2 arguments:
+                </p>
+                <code>
+                    def my_function(fname, lname): <br>
+                      print(fname + " " + lname) <br>
+                    <br>
+                    my_function("Emil", "Refsnes")
+                </code>
+                <p>
+                    If you try to call the function with 1 or 3 arguments, you will get an error:
+                </p>
+                <h2>Example</h2>
+                <p>
+                    This function expects 2 arguments, but gets only 1:
+                </p>
+                <code>
+                    def my_function(fname, lname): <br>
+                      print(fname + " " + lname) <br>
+                    <br>
+                    my_function("Emil")
+                </code>
+                <h1>Arbitrary Keyword Arguments, **kwargs</h1>
+                <p>
+                    If you do not know how many keyword arguments that will be passed into your function, add two asterisk: ** before the parameter name in the function definition.
+                </p>
+                <p>
+                    This way the function will receive a dictionary of arguments, and can access the items accordingly:
+                </p>
+                <h2>Example</h2>
+                <p>
+                    If the number of keyword arguments is unknown, add a double ** before the parameter name:
+                </p>
+                <code>
+                    def my_function(**kid): <br>
+                      print("His last name is " + kid["lname"]) <br>
+                    <br>
+                    my_function(fname = "Tobias", lname = "Refsnes")
+                </code>
+            </section>
+        </div>
+        
+    </main>
+</body>
+</html>
